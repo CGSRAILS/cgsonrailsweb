@@ -1,9 +1,10 @@
 @import url('reset.css');
 
+
 body{
 	background:#000;
 	color:#fff;
-	font-family: 'PT Sans Narrow', Arial, sans-serif;
+    font-family: 'OswaldBook', Arial, sans-serif;
 	text-transform:uppercase;
 }
 a{
@@ -16,7 +17,7 @@ img.ac_bgimage{
 	top:0px;
 	width:100%;
 	opacity:0.8;
-	display:none;
+	display:none;  
 }
 .ac_overlay{
 	width:100%;
@@ -52,6 +53,7 @@ img.ac_bgimage{
 	top:50%;
 	left:0px;
 	margin-top:-65px;
+    z-index:999;
 }
 .ac_content h1{
 	background:transparent url(/images/bg_menu.png) repeat top left;
@@ -60,7 +62,7 @@ img.ac_bgimage{
 	width:90px;
 	height:50px;
 	padding:20px;
-	font-size:36px;
+	font-size:30px;
 	font-weight:bold;
 	line-height:20px;
 	margin-right:1px;
@@ -69,13 +71,27 @@ img.ac_bgimage{
 	display:block;
 	font-weight:normal;
 	font-size:44%;
+    margin-left:3px;
 }
+
+.ac_content h4{
+	display:block;
+	float:left;
+	font-size:15px;
+	text-shadow:1px 1px 10px #000;
+	font-weight:normal;
+	font-style:italic;
+    font-family: 'OswaldLight';
+
+}
+
 .ac_menu{
 	background:transparent url(/images/bg_menu.png) repeat top left;
 	float:left;
 	position:relative;
 	height:90px;
 	width:0px; 
+    z-index:999;
 }
 .ac_menu > ul{
 	float:right;
@@ -95,12 +111,14 @@ img.ac_bgimage{
 	text-align:center;
 	line-height:90px;
 	outline:none;
-	font-size:17px;
-	font-weight:bold;
-
+	font-weight:normal;
+	font-style:italic;
+    font-family: 'OswaldLight';
+    font-size:15px;
 }
+
 .ac_subitem{
-	width:400px;
+	width:380px;
 	height:0px; /* animate to 400px */
 	top:50%;
 	right:0px;
@@ -110,9 +128,17 @@ img.ac_bgimage{
 	overflow:hidden;
 	background:transparent url(/images/bg_menu.png) repeat top left;
 }
+.ac_subitem_img{
+	display:inline;
+	margin-left:-4px; 
+	z-index:99;	
+}
+
 .ac_subitem h2{
-	font-size:22px;
-	font-weight:bold;
+	font-weight:bolder;
+	font-style:italic;
+    font-family: 'OswaldBook', Arial, sans-serif;
+	font-size:15px;
 	color:#fff;
 	padding: 40px 0px 0px 40px;
 	text-shadow:0px 0px 1px #000;
@@ -124,11 +150,13 @@ img.ac_bgimage{
 	margin:10px 0px;
 }
 .ac_subitem ul li:first-child{
-	font-size:14px;
+    font-size:12px;
 	text-transform:none;
-	border-bottom:1px dotted #333;
-	padding-bottom:15px;
-	margin-bottom:15px;
+	border-top:1px dotted #333;
+    border-bottom:1px dotted #333;
+    font-family: 'TeXGyreAdventorBoldItalic';
+    color: white
+    z-index:100;
 }
 
 span.ac_close{
@@ -148,32 +176,204 @@ span.ac_close:hover{
 	bottom:0px;
 	left:0px;
 	width:100%;
-	font-size:13px;
 	background:#000;
-	opacity:0.9;
+	opacity:0.6;
 	height:20px;
-	padding-bottom:5px;
 }
-.ac_footer a{
-	padding:5px 10px;
-	letter-spacing:1px;
-	text-shadow:1px 1px 1px #000;
-	color:#ddd;
-	float:right;
-}
-.footer a:hover{
-	color:#fff;
-}
-.ac_footer a span{
-	font-weight:bold;
-}
-.ac_footer a.ac_left{
-	float:left;
-}
-        
-p.NoscriptFont 
+
+
+.ac_footer  H5 
+          
+          {
+			 text-transform:lowercase;
+		     font-family: 'DJGrossNormal';
+		     float:right;
+		     font-size:10px;
+		     color: gray;
+		     font-weight:normal;
+		     font-style:italic;
+             margin-right: 10px;
+             margin-top: 5px;
+          }
+
+
+#Dim
+		  {
+			 display: none;
+			 background: #000; 
+			 position: fixed; left: 0; top: 0; 
+			 width: 100%; height: 100%;
+			 opacity: .60;
+			 z-index:4;
+		  }
+
+
+@font-face 
+          {
+		    font-family: 'DJGrossNormal';
+		    src: url('/fonts/fontfooter/DJGROSS-webfont.eot');
+		    src: url('/fonts/fontfooter/DJGROSS-webfont.eot?#iefix') format('embedded-opentype'),
+		         url('/fonts/fontfooter/DJGROSS-webfont.woff') format('woff'),
+		         url('/fonts/fontfooter/DJGROSS-webfont.ttf') format('truetype'),
+		         url('/fonts/fontfooter/DJGROSS-webfont.svg#DJGrossNormal') format('svg');
+		    font-weight: normal;
+		    font-style: normal;
+          }
+
+@font-face 
+          {
+		    font-family: 'OswaldLight';
+		    src: url('/fonts/fontsmenu/Oswald-Light-webfont.eot');
+		    src: url('/fonts/fontsmenu/Oswald-Light-webfont.eot?#iefix') format('embedded-opentype'),
+		         url('/fonts/fontsmenu/Oswald-Light-webfont.woff') format('woff'),
+		         url('/fonts/fontsmenu/Oswald-Light-webfont.ttf') format('truetype'),
+		         url('/fonts/fontsmenu/Oswald-Light-webfont.svg#OswaldLight') format('svg');
+		    font-weight: normal;
+		    font-style: normal;
+          }
+
+@font-face 
+          {
+		    font-family: 'OswaldBook';
+		    src: url('/fonts/fontsmenu/Oswald-Regular-webfont.eot');
+		    src: url('/fonts/fontsmenu/Oswald-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+		         url('/fonts/fontsmenu/Oswald-Regular-webfont.woff') format('woff'),
+		         url('/fonts/fontsmenu/Oswald-Regular-webfont.ttf') format('truetype'),
+		         url('/fonts/fontsmenu/Oswald-Regular-webfont.svg#OswaldBook') format('svg');
+		    font-weight: normal;
+		    font-style: normal;
+           }
+
+@font-face 
            {
-             font-family: 'PT Sans Narrow', Arial, sans-serif;
-             color:        white;
-             font-size:    100%;
-	        }
+		    font-family: 'OswaldBold';
+		    src: url('/fonts/fontsmenu/Oswald-Bold-webfont.eot');
+		    src: url('/fonts/fontsmenu/Oswald-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+		         url('/fonts/Oswald-Bold-webfont.woff') format('woff'),
+		         url('/fonts/fontsmenu/Oswald-Bold-webfont.ttf') format('truetype'),
+		         url('/fonts/fontsmenu/Oswald-Bold-webfont.svg#OswaldBold') format('svg');
+		    font-weight: normal;
+		    font-style: normal;
+           }
+
+@font-face 
+          {
+		    font-family: 'OswaldStencilRegular';
+		    src: url('/fonts/fontsmenu/Oswald-Stencil-webfont.eot');
+		    src: url('/fonts/fontsmenu/Oswald-Stencil-webfont.eot?#iefix') format('embedded-opentype'),
+		         url('/fonts/fontsmenu/Oswald-Stencil-webfont.woff') format('woff'),
+		         url('/fonts/fontsmenu/Oswald-Stencil-webfont.ttf') format('truetype'),
+		         url('/fonts/fontsmenu/Oswald-Stencil-webfont.svg#OswaldStencilRegular') format('svg');
+		    font-weight: normal;
+		    font-style: normal;
+           }
+
+
+@font-face {
+    font-family: 'TeXGyreAdventorRegular';
+    src: url('/fonts/texgyreadventor-regular-webfont.eot');
+    src: url('/fonts/texgyreadventor-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/texgyreadventor-regular-webfont.woff') format('woff'),
+         url('/fonts/texgyreadventor-regular-webfont.ttf') format('truetype'),
+         url('/fonts/texgyreadventor-regular-webfont.svg#TeXGyreAdventorRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'TeXGyreAdventorItalic';
+    src: url('/fonts/texgyreadventor-italic-webfont.eot');
+    src: url('/fonts/texgyreadventor-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/texgyreadventor-italic-webfont.woff') format('woff'),
+         url('/fonts/texgyreadventor-italic-webfont.ttf') format('truetype'),
+         url('/fonts/texgyreadventor-italic-webfont.svg#TeXGyreAdventorItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'TeXGyreAdventorBold';
+    src: url('texgyreadventor-bold-webfont.eot');
+    src: url('texgyreadventor-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('texgyreadventor-bold-webfont.woff') format('woff'),
+         url('texgyreadventor-bold-webfont.ttf') format('truetype'),
+         url('texgyreadventor-bold-webfont.svg#TeXGyreAdventorBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'TeXGyreAdventorBoldItalic';
+    src: url('/fonts/texgyreadventor-bolditalic-webfont.eot');
+    src: url('/fonts/texgyreadventor-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/texgyreadventor-bolditalic-webfont.woff') format('woff'),
+         url('/fonts/texgyreadventor-bolditalic-webfont.ttf') format('truetype'),
+         url('/fonts/texgyreadventor-bolditalic-webfont.svg#TeXGyreAdventorBoldItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+H7 
+          {
+             font-family: 'OswaldBook', Arial, sans-serif;
+             color: white;
+             font-size: 100%;
+	      }
+
+
+H5
+	     {
+
+			font-weight:normal;
+			font-style:italic;
+		    font-family: 'OswaldLight';
+		    font-size:14px;
+		    color:gray;
+		 }
+
+
+p.gray  {display:inline;color: gray;}
+p.graysmallC  {display:inline;color: gray;font-size:xx-small;}
+
+p.graysmall  {display:inline;color: gray;font-size:xx-small;margin-left: 11%;}
+p.grayextras  {display:inline;color: gray;font-variant:small-caps;}
+p.small {display:inline;font-size:xx-small;}
+p.smallservice {display:inline;font-size:xx-small;}
+p.smallservicespace {margin-left: 4%;display:inline;font-size:xx-small;}
+p.smallservicespaceD {margin-left: 4%;display:inline;font-size:xx-small;}
+
+p.smallnota {display:inline;font-size:x-small;}
+p.smallnotaspace {margin-left: 10px;display:inline;font-size:x-small;}
+
+p.smallPreA {display:inline;font-size:xx-small;margin-left: 27.5%;}
+p.smallPreC {display:inline;font-size:xx-small;margin-left: 35%;}
+p.smallPreD {display:inline;font-size:xx-small;margin-left: 53%;}
+
+.buttons{display:inline; margin-left: 50%;}
+
+
+p.smallgray {display:inline;color: gray;font-variant:small-caps;}
+p.smallspace {margin-left: 10px;display:inline;font-variant:small-caps;}
+p.smallgrayspace {display:inline;color: gray;font-variant:small-caps;margin-left: 10px;}
+p.nota  {
+           margin-left: 10px;
+           font-weight:bolder;
+		   font-style:italic;
+		   font-family: 'OswaldBook', Arial, sans-serif;
+		   font-size:12px;
+		   color:#fff;
+           text-shadow:0px 0px 1px #000;  
+        }
+
+
+.buttonsA{display:inline; margin-left: 50%;}
+.buttonsB{display:inline; margin-left: 36.9%;}
+.buttonsC{display:inline; margin-left: 45%;}
+.buttonsD{display:inline; margin-left: 30.5%;}
+.buttonsE{display:inline; margin-left: 42.1%;}
